@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NASA : MARS INFORMATION</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container" style="background-color:whitesmoke" id="page-container">
+
+    <div class="jumbotron text-center">
+      <h1><strong>Mission To Mars</strong></h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+	
+    <!-- MARS DATA -->
+    <div class="row" id="mars-news">
+      <div class="col-md-12">
+		<p class="h3">Latest Mars News</p>
+		<p class="h5">{{dict.news_title}}</p>
+		<p>{{dict.news_paragraph}}</p>
+      </div>
+    </div>
+	<br>
+	<div class="row" id="mars-image-weather-facts">
+		<div class="col-md-8" id="mars-featured-image">
+			<p class="h3">Featured Mars Image</strong></p>
+			<img src={{ dict.featured_image_url }} width="700px" height="550px">
+		</div> 
+		
+		<div class="col-md-4" id="mars-weather-facts">
+			<div id="mars-weather">
+				<p class="h5 mw">Current Weather on Mars</strong></p>
+				<p class="mw">{{ dict.mars_weather }}</p>
+			</div>
+			<br><br>
+			<p class="h5">Mars Facts</p>
+			{{ dict.facts_table }}
+		</div>
+	</div>
+	
+	<br>
+	<br>
+	<p class="h3" style="text-align:center">Mars Hemispheres</p>
+	<br>
+	
+	<div class="row" id="mars-featured-image">
+		
+		<div class="col-md-6 cd" style="border:1px solid grey">
+			<img src= {{dict.hemisphere_list[0]['img_url']}} width="500px" height="500px" class="image">
+			<p class="h4">{{dict.hemisphere_list[0]['title']}}</p>
+		</div>
+		<div class="col-md-6 cd" style="border:1px solid grey">
+			<img src= {{dict.hemisphere_list[1]['img_url']}}  width="500px" height="500px" class="image"> 
+			<p class="h4">{{dict.hemisphere_list[1]['title']}}</p>
+		</div>
+		<br>
+		<div class="col-md-6 cd" style="border:1px solid grey">
+			<img src= {{dict.hemisphere_list[2]['img_url']}} width="500px" height="500px" class="image">
+			<p class="h4">{{dict.hemisphere_list[2]['title']}}</p>
+		</div>
+		<div class="col-md-6 cd" style="border:1px solid grey">
+			<img src= {{dict.hemisphere_list[3]['img_url']}} width="500px" height="500px" class="image">
+			<p class="h4">{{dict.hemisphere_list[3]['title']}}</p>
+		</div>
+	</div>
+	<br>
+	<br>
+
+	
+
+
+  </div>
+    
+</body>
+
+</html>
+
