@@ -42,9 +42,6 @@ def scrape():
 	
 	### JPL Mars Space Images - Featured Image ###
 	
-	# Opening the chrome browser using Splinter
-	executable_path = {'executable_path': 'chromedriver.exe'}
-	browser = Browser('chrome', **executable_path, headless=False)
 
 	# url of website that needs to be scraped
 	url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
@@ -152,8 +149,6 @@ def scrape():
 	for heading in headings:
     
 		print(heading.text)
-		executable_path = {'executable_path': 'chromedriver.exe'}
-		browser = Browser('chrome', **executable_path, headless=False)
 		browser.visit(hemispheres_url)
 		
 		try:
