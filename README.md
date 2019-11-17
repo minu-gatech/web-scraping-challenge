@@ -1,2 +1,2 @@
 # web-scraping-challenge
-Web Scraping &amp; MongoDB Homework
+Web Scraping &amp; MongoDB Challenge
